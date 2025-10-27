@@ -6,7 +6,7 @@ public class TrianglePerimetr {
         System.out.println(text);
     }
 
-    private static double trianglePerimetr(double a) {
-        return a * 3;
+    public static double trianglePerimetr(double side) {
+        return side * 3;
     }
 }

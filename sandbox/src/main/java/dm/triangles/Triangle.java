@@ -8,7 +8,7 @@ public class Triangle {
         TrianglePerimetr.printTrianglePerimetr (7.);
 
 
-        TriangleArea.printTriangleArea(15.3, 10.4, 15.7 );
+        TriangleArea.printTriangleArea(15., 10., 15.);
     }
 
 
