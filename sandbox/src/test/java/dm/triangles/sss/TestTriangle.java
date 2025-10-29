@@ -13,8 +13,6 @@ public class TestTriangle {
     }
 @Test
     void canCalculateArea() {
-        var s = new trianglePandS((int) 7,10,15);
-        var result  = s.area();
-        Assertions.assertEquals(29, result);
+        Assertions.assertEquals( 48, new trianglePandS(10, 12, 13).area());
     }
 }
