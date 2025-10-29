@@ -1,20 +1,11 @@
 package dm.triangles.sss;
 
-public class trianglePandS {
-    int aSide;
-    int bSide;
-    int cSide;
-
-    public trianglePandS(int aSide, int bSide, int cSide) {
-        this.aSide = aSide;
-        this.bSide = bSide;
-        this.cSide = cSide;
-    }
+public record trianglePandS(int aSide, int bSide, int cSide) {
 
     public static void main(String[] args) {
     }
     public int perimetr() {
-        return this.aSide + this.bSide + this.cSide;
+        return  this.aSide + this.bSide + this.cSide;
     }
 
     public int area () {
