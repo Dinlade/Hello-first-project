@@ -3,7 +3,7 @@ package dm.triangles.sss;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class trianglesTestsPerimetr {
+public class TestTriangle {
 
     @Test
     void canCalculatePerimetr(){
@@ -13,8 +13,8 @@ public class trianglesTestsPerimetr {
     }
 @Test
     void canCalculateArea() {
-        var s = new trianglePandS(7.,10.,15.,);
+        var s = new trianglePandS((int) 7,10,15);
         var result  = s.area();
-        Assertions.assertEquals(125.77882373436317, result);
+        Assertions.assertEquals(29, result);
     }
 }
