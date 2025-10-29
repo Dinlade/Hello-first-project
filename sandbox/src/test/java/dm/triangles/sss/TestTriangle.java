@@ -1,6 +1,5 @@
 package dm.triangles.sss;
 
-import dm.triangles.Triangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,12 +7,14 @@ public class trianglesTestsPerimetr {
 
     @Test
     void canCalculatePerimetr(){
-        var result = TrianglePerimetr.trianglePerimetr(7);
-        Assertions.assertEquals (21.0, result);
+        var s = new trianglePandS(7, 5, 10);
+        int result = s.perimetr();
+        Assertions.assertEquals (22, result);
     }
 @Test
     void canCalculateArea() {
-        var result  = TriangleArea.triangleArea(15.,10.,15.);
+        var s = new trianglePandS(7.,10.,15.,);
+        var result  = s.area();
         Assertions.assertEquals(125.77882373436317, result);
     }
 }
