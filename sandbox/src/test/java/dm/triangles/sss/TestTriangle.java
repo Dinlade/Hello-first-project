@@ -35,5 +35,36 @@ public class TestTriangle {
         } catch (IllegalArgumentException exeption) {
         }
             }
-        }
+            @Test
+
+    void testNonEquality() {
+        var s1 = new TrianglePandS( 5,6,7);
+        var s2 = new TrianglePandS(5,5,7);
+        Assertions.assertNotEquals( s1, s2);
+            }
+
+    @Test
+
+    void testPass() {
+        var s1 = new TrianglePandS( 5,6,7);
+        var s2 = new TrianglePandS(5,6,7);
+        Assertions.assertTrue(s1.equals(s2));
+    }
+
+    @Test
+    void testEquality() {
+        var s1 = new TrianglePandS( 3,4,5);
+        var s2 = new TrianglePandS(4,5,3);
+        Assertions.assertEquals( s1, s2);
+    }
+
+    @Test
+
+    void tesEquality2() {
+        var s1 = new TrianglePandS( 5,6,7);
+        var s2 = new TrianglePandS(5,5,7);
+        Assertions.assertNotEquals( s1, s2);
+    }
+
+}
 
