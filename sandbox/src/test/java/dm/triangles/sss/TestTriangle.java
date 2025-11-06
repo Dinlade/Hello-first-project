@@ -57,5 +57,14 @@ public class TestTriangle {
         var s2 = new TrianglePandS(4,5,3);
         Assertions.assertEquals( s1, s2);
     }
+    @Test
+    void testEquality2() {
+        var a = 2;
+        var b = 3;
+        var c = 4;
+        var s1 = new TrianglePandS(a,b,c);
+        var s2 = new TrianglePandS(a,c,b);
+        Assertions.assertEquals( s1, s2);
+    }
 }
 

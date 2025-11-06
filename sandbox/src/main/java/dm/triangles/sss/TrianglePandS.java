@@ -29,12 +29,16 @@ public record TrianglePandS(int aSide, int bSide, int cSide) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TrianglePandS triangle = (TrianglePandS) o;
-        return (aSide == triangle.aSide && bSide == triangle.bSide && cSide == triangle.cSide) ||
-                (aSide == triangle.cSide && bSide == triangle.aSide && cSide == triangle.bSide);
+        return Double.compare(triangle.aSide, this.aSide) == 0 && Double.compare(triangle.bSide, this.bSide) == 0 && Double.compare(triangle.cSide, this.cSide) == 0
+                || Double.compare(triangle.aSide, this.bSide) == 0 && Double.compare(triangle.bSide, this.aSide) == 0 && Double.compare(triangle.cSide, this.cSide) == 0
+                || Double.compare(triangle.aSide, this.cSide) == 0 && Double.compare(triangle.bSide, this.bSide) == 0 && Double.compare(triangle.cSide, this.aSide) == 0
+                || Double.compare(triangle.aSide, this.cSide) == 0 && Double.compare(triangle.bSide, this.aSide) == 0 && Double.compare(triangle.cSide, this.bSide) == 0
+                || Double.compare(triangle.aSide, this.bSide) == 0 && Double.compare(triangle.bSide, this.cSide) == 0 && Double.compare(triangle.cSide, this.aSide) == 0
+                || Double.compare(triangle.aSide, this.aSide) == 0 && Double.compare(triangle.bSide, this.cSide) == 0 && Double.compare(triangle.cSide, this.bSide) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(aSide, bSide, cSide);
+        return 1;
     }
 }
