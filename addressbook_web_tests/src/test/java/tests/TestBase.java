@@ -1,6 +1,6 @@
-package Tests;
+package tests;
 
-import Manager.ApplicationManager;
+import manager.ApplicationManager;
 import org.junit.jupiter.api.BeforeEach;
 
 public class TestBase {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-12T11:04:49.029Z" hostname="DESKTOP-F8C0EVU" time="8.708">
+  <properties/>
+  <testcase name="canCreateGroupWithEmptyName()" classname="tests.GroupCreationTests" time="7.563"/>
+  <testcase name="canCreateGroup()" classname="tests.GroupCreationTests" time="0.58"/>
+  <testcase name="canCreateGroupWithNameOnly()" classname="tests.GroupCreationTests" time="0.562"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
