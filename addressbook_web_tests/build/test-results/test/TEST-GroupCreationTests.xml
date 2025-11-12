@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-10T19:53:45.258Z" hostname="DESKTOP-F8C0EVU" time="4.233">
+<testsuite name="GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-12T10:03:07.502Z" hostname="DESKTOP-F8C0EVU" time="7.85">
   <properties/>
-  <testcase name="canCreateGroupWithNameOnly()" classname="GroupCreationTests" time="4.233"/>
+  <testcase name="canCreateGroupWithEmptyName()" classname="GroupCreationTests" time="6.581"/>
+  <testcase name="canCreateGroup()" classname="GroupCreationTests" time="0.705"/>
+  <testcase name="canCreateGroupWithNameOnly()" classname="GroupCreationTests" time="0.563"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
