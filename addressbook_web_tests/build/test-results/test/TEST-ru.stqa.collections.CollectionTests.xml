@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.collections.CollectionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-17T16:31:38.495Z" hostname="DESKTOP-F8C0EVU" time="0.016">
-  <properties/>
-  <testcase name="listTests()" classname="ru.stqa.collections.CollectionTests" time="0.016"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

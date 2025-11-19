@@ -17,11 +17,6 @@ public class GroupHelper {
         }
     }
 
-    public boolean isGroupPresent() {
-        openGroupsPage();
-        return manager.isElementPresent(By.name("selected[]"));
-    }
-
     public void createGroup(GroupData group) {
         openGroupsPage();
         manager.driver.findElement(By.name("new")).click();
@@ -40,5 +35,10 @@ public class GroupHelper {
         manager.driver.findElement(By.name("selected[]")).click();
         manager.driver.findElement(By.name("delete")).click();
         manager.driver.findElement(By.linkText("group page")).click();
+    }
+
+    public int getCount() {
+        openGroupsPage();
+        return manager.driver.findElements(By.name("selected[]")).size();
     }
 }
