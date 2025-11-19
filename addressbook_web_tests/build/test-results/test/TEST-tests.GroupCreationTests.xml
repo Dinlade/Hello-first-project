@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.GroupCreationTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-11-19T16:13:51.398Z" hostname="DESKTOP-F8C0EVU" time="13.63">
+  <properties/>
+  <testcase name="[1] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="3.876"/>
+  <testcase name="[2] GroupData[name=, header=, footer=group footer]" classname="tests.GroupCreationTests" time="0.568"/>
+  <testcase name="[3] GroupData[name=, header=group header, footer=]" classname="tests.GroupCreationTests" time="0.547"/>
+  <testcase name="[4] GroupData[name=, header=group header, footer=group footer]" classname="tests.GroupCreationTests" time="0.57"/>
+  <testcase name="[5] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="0.552"/>
+  <testcase name="[6] GroupData[name=ykdjmgdopk, header=yllqimvfvy, footer=cklxjmlshb]" classname="tests.GroupCreationTests" time="0.511"/>
+  <testcase name="[7] GroupData[name=sewjgkoaatvjrvgqmeum, header=jrimhqakazyananjvica, footer=alrypdyevbigspltkusp]" classname="tests.GroupCreationTests" time="0.673"/>
+  <testcase name="[8] GroupData[name=vdlzgdjgavlkuykujunjgdfgemsshu, header=qswrxssxgtsprbbixjvutwrckibfkr, footer=lywoedkyitwnvvyjctldsabvmmnsvt]" classname="tests.GroupCreationTests" time="0.614"/>
+  <testcase name="[9] GroupData[name=hrhqczjkjbfduyftvsujqyxwokhzocdlylyabkwy, header=powcgadnieyuuhcnslwelepyrjrduichppzwfvxb, footer=zzmmdgzxfmwlqzjvllssmztegdnvoonlhjuvwmiu]" classname="tests.GroupCreationTests" time="0.616"/>
+  <testcase name="[10] GroupData[name=group name, header=, footer=]" classname="tests.GroupCreationTests" time="0.558"/>
+  <testcase name="[11] GroupData[name=group name, header=, footer=group footer]" classname="tests.GroupCreationTests" time="0.576"/>
+  <testcase name="[12] GroupData[name=group name, header=group header, footer=]" classname="tests.GroupCreationTests" time="0.55"/>
+  <testcase name="[13] GroupData[name=group name, header=group header, footer=group footer]" classname="tests.GroupCreationTests" time="0.577"/>
+  <testcase name="[14] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="0.606"/>
+  <testcase name="[15] GroupData[name=gaogdosmgh, header=srkwmphiii, footer=raxbvkmlot]" classname="tests.GroupCreationTests" time="0.607"/>
+  <testcase name="[16] GroupData[name=fvxjknxnfsmevoqbnjhy, header=loatrouexhbfketwbpvm, footer=voegyfcjeinuvynnvfir]" classname="tests.GroupCreationTests" time="0.525"/>
+  <testcase name="[17] GroupData[name=anjriprhldunwzktmkdaygkrfcpkon, header=gacqynchffyoaratcvuoeuxuezjvsh, footer=mzxvqdsiihmnwdqoaooogxlhbcknjf]" classname="tests.GroupCreationTests" time="0.561"/>
+  <testcase name="[18] GroupData[name=ngywcsxxncbkmnksmuryvdjzmwrgvhlkzhrcmawa, header=kbsvrgquoqnqgeguezaruywbmshwcmusedpazaer, footer=kyywhkulovffxktzovsjrxdlytfayvoqfgaqitdf]" classname="tests.GroupCreationTests" time="0.529"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

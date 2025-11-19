@@ -32,7 +32,6 @@ public class GroupHelper {
 
     public void removeSelectedGroups() {
         openGroupsPage();
-        manager.driver.findElement(By.name("selected[]")).click();
         manager.driver.findElement(By.name("delete")).click();
         manager.driver.findElement(By.linkText("group page")).click();
     }
