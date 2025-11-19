@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-19T08:36:01.137Z" hostname="DESKTOP-F8C0EVU" time="3.761">
-  <properties/>
-  <testcase name="canCreateContact()" classname="tests.ContactCreationTests" time="3.761"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

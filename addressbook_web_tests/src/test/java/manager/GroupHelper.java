@@ -30,7 +30,7 @@ public class GroupHelper {
         manager.driver.findElement(By.linkText("group page")).click();
     }
 
-    public void removeGroup() {
+    public void removeSelectedGroups() {
         openGroupsPage();
         manager.driver.findElement(By.name("selected[]")).click();
         manager.driver.findElement(By.name("delete")).click();
@@ -40,5 +40,18 @@ public class GroupHelper {
     public int getCount() {
         openGroupsPage();
         return manager.driver.findElements(By.name("selected[]")).size();
+    }
+
+    public void removeAllGroups() {
+        openGroupsPage();
+        selectAllGroups();
+        removeSelectedGroups();
+    }
+
+    private void selectAllGroups() {
+        var checkboxes = manager.driver.findElements(By.name("selected[]"));
+        for (var checkbox : checkboxes) {
+            checkbox.click();
+        }
     }
 }
