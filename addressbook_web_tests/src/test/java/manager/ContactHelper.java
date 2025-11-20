@@ -60,4 +60,10 @@ public class ContactHelper extends HelperBase{
     private void returnToHomePage() {
         click(By.linkText("home page"));
     }
+
+    public int getCount() {
+        openHomePage();
+        return manager.driver.findElements(By.name("selected[]")).size();
+    }
 }
+
