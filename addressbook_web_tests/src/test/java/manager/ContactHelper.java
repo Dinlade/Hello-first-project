@@ -3,7 +3,7 @@ package manager;
 import model.ContactData;
 import org.openqa.selenium.By;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
     public ContactHelper(ApplicationManager manager) {
         super(manager);
     }
@@ -36,7 +36,7 @@ public class ContactHelper extends HelperBase{
 
     public boolean isContactPresent() {
         openHomePage();
-        return manager.isElementPresent(By.name("selected[]"));
+        return !manager.isElementPresent(By.name("selected[]"));
     }
 
     private void selectContact() {
@@ -64,6 +64,19 @@ public class ContactHelper extends HelperBase{
     public int getCount() {
         openHomePage();
         return manager.driver.findElements(By.name("selected[]")).size();
+    }
+
+
+    public void removeAllContacts() {
+        openHomePage();
+        selectAllContacts();
+        removeSelectedContact();
+    }
+    private void selectAllContacts() {
+        var checkboxes = manager.driver.findElements(By.name("selected[]"));
+        for (var checkbox : checkboxes) {
+            checkbox.click();
+        }
     }
 }
 
