@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.GroupCreationTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-11-23T15:01:36.085Z" hostname="DESKTOP-F8C0EVU" time="14.148">
+<testsuite name="tests.GroupCreationTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-25T06:17:46.182Z" hostname="DESKTOP-F8C0EVU" time="3.575">
   <properties/>
-  <testcase name="[1] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="4.135"/>
-  <testcase name="[2] GroupData[name=, header=, footer=group footer]" classname="tests.GroupCreationTests" time="0.534"/>
-  <testcase name="[3] GroupData[name=, header=group header, footer=]" classname="tests.GroupCreationTests" time="0.646"/>
-  <testcase name="[4] GroupData[name=, header=group header, footer=group footer]" classname="tests.GroupCreationTests" time="0.559"/>
-  <testcase name="[5] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="0.62"/>
-  <testcase name="[6] GroupData[name=omxyczreog, header=qqeybehjyv, footer=txpnlnwizg]" classname="tests.GroupCreationTests" time="0.622"/>
-  <testcase name="[7] GroupData[name=xmldpmcteosyyxwmvreb, header=izplkeshioiiqnxdfrjz, footer=zkmyzwnvrezzmamausrh]" classname="tests.GroupCreationTests" time="0.582"/>
-  <testcase name="[8] GroupData[name=gnyqugwuqjjsshtuissgyoaezirxkg, header=mjobgjowwmotdgkfvedvhnvzqvhopp, footer=spngmrnberdimslczsdmcwpzxtzopk]" classname="tests.GroupCreationTests" time="0.582"/>
-  <testcase name="[9] GroupData[name=fxocvsqfnfqmnjsaezaajvqlqeadkghaweocysed, header=mxjloxfowkltewzqizooogpwjpcrbdksywixjhqw, footer=jhotkbkiyjgcrnbxhkwgnvvrxjavofzkslclturi]" classname="tests.GroupCreationTests" time="0.576"/>
-  <testcase name="[10] GroupData[name=group name, header=, footer=]" classname="tests.GroupCreationTests" time="0.524"/>
-  <testcase name="[11] GroupData[name=group name, header=, footer=group footer]" classname="tests.GroupCreationTests" time="0.544"/>
-  <testcase name="[12] GroupData[name=group name, header=group header, footer=]" classname="tests.GroupCreationTests" time="0.586"/>
-  <testcase name="[13] GroupData[name=group name, header=group header, footer=group footer]" classname="tests.GroupCreationTests" time="0.567"/>
-  <testcase name="[14] GroupData[name=, header=, footer=]" classname="tests.GroupCreationTests" time="0.643"/>
-  <testcase name="[15] GroupData[name=sdhqehtgzx, header=vdyzqfrftp, footer=lcvkdvsscb]" classname="tests.GroupCreationTests" time="0.589"/>
-  <testcase name="[16] GroupData[name=irsstwfsvqunfvlbroou, header=pwfguqaaoqglshpmhfsi, footer=txmkijjzkxmgmsqxuljk]" classname="tests.GroupCreationTests" time="0.598"/>
-  <testcase name="[17] GroupData[name=xmylnqxncwfkpnowmocnncozmxtrzt, header=ruryxmnhiwqnveqeuwlncmhczlrzeg, footer=gnuinwrnprumulxlzacuxcbrtmdvnz]" classname="tests.GroupCreationTests" time="0.615"/>
-  <testcase name="[18] GroupData[name=qpyjogcetkklkqlsgawrnupjstrbubqnkbvrghvs, header=zkrjxknlyvasccbfuqkeexomiggjvdlvcprpgrty, footer=ruubinepdnnzxchwpmzretiojwguryymzwtkjfcr]" classname="tests.GroupCreationTests" time="0.612"/>
+  <testcase name="[1] GroupData[id=, name=, header=, footer=]" classname="tests.GroupCreationTests" time="3.575">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[GroupData[id=375, name=, header=, footer=]]&gt; but was: &lt;[]&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[GroupData[id=375, name=, header=, footer=]]&gt; but was: &lt;[]&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at app//tests.GroupCreationTests.canNotCreateGroup(GroupCreationTests.java:50)
+	at java.base@22.0.2/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:194)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:782)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:291)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:291)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base@22.0.2/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:291)
+	at java.base@22.0.2/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base@22.0.2/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base@22.0.2/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base@22.0.2/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:611)
+	at java.base@22.0.2/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base@22.0.2/java.util.ArrayList.forEach(ArrayList.java:1597)
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
