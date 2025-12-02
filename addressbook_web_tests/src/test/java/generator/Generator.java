@@ -1,0 +1,28 @@
+package generator;
+
+
+
+public class Generator {
+
+    @Parameter(names={"--type", "-t"})
+    String type;
+
+
+    public static void main(String[] args) {
+        new Generator().run();
+    }
+
+    private void run() {
+
+        var data = generate();
+        save(data);
+    }
+
+    private void save(Object data) {
+    }
+
+    private Object generate() {
+        return null;
+    }
+}
+
