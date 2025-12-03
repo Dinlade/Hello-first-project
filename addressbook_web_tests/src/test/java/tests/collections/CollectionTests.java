@@ -1,4 +1,4 @@
-package ru.stqa.collections;
+package tests.collections;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

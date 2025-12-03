@@ -13,14 +13,20 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation ("org.seleniumhq.selenium:selenium-java:4.38.0")
+    testImplementation("org.seleniumhq.selenium:selenium-java:4.38.0")
     implementation("org.jcommander:jcommander:2.0")
+    implementation("tools.jackson.core:jackson-databind:3.0.0")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.1")
 }
 
 tasks.test {
-useJUnitPlatform()
-if (project.hasProperty("browser")) {
-systemProperty ("browser", project.property("browser"))
+    useJUnitPlatform()
+    if (project.hasProperty("browser")) {
+        systemProperty("browser", project.property("browser")!!)
+    }
+if (project.hasProperty("target")) {
+    systemProperty("target", project.property("target")!!)
 }
 }
 
