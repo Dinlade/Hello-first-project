@@ -14,6 +14,14 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation ("org.seleniumhq.selenium:selenium-java:4.38.0")
-    implementation("org.jcommander:jcommander:3.0")
+    implementation("org.jcommander:jcommander:2.0")
 }
+
+tasks.test {
+useJUnitPlatform()
+if (project.hasProperty("browser")) {
+systemProperty ("browser", project.property("browser"))
+}
+}
+
 
