@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-03T20:49:10.480Z" hostname="DESKTOP-F8C0EVU" time="5.974">
+<testsuite name="tests.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-05T13:17:59.975Z" hostname="DESKTOP-F8C0EVU" time="25.631">
   <properties/>
-  <testcase name="[1] GroupData[id=, name=, header=, footer=]" classname="tests.GroupCreationTests" time="4.236"/>
-  <testcase name="[2] GroupData[id=, name=uibxwgirzl, header=ejsmdummpm, footer=izqaaompxc]" classname="tests.GroupCreationTests" time="0.87"/>
-  <testcase name="[3] GroupData[id=, name=filatlziazrjdttvaful, header=zjygsdymebsueupzlskm, footer=lqnfslhchnupaxavcnxv]" classname="tests.GroupCreationTests" time="0.863"/>
+  <testcase name="[1] GroupData[id=, name=vehrnrhcfb, header=kgxcqjhfyzfmuiqlrsvj, footer=jqjplnczvwppdlkhszpfdshquvilos]" classname="tests.GroupCreationTests" time="25.631"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[дек. 05, 2025 4:18:03 PM io.opentelemetry.api.GlobalOpenTelemetry maybeAutoConfigureAndSetGlobal
+INFO: AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+]]></system-err>
 </testsuite>
