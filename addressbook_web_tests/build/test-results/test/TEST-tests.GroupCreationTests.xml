@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-03T20:49:10.480Z" hostname="DESKTOP-F8C0EVU" time="5.974">
+  <properties/>
+  <testcase name="[1] GroupData[id=, name=, header=, footer=]" classname="tests.GroupCreationTests" time="4.236"/>
+  <testcase name="[2] GroupData[id=, name=uibxwgirzl, header=ejsmdummpm, footer=izqaaompxc]" classname="tests.GroupCreationTests" time="0.87"/>
+  <testcase name="[3] GroupData[id=, name=filatlziazrjdttvaful, header=zjygsdymebsueupzlskm, footer=lqnfslhchnupaxavcnxv]" classname="tests.GroupCreationTests" time="0.863"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
