@@ -32,17 +32,17 @@ public class ContactCreationTests extends TestBase{
 //                }
 //            }
 //        }
-//        var json = "";
-//        try (var reader = new FileReader("contacts.json");
-//             var breader = new BufferedReader(reader)
-//        ) {
-//            var line = breader.readLine();
-//            while(line != null) {
-//                json = json + line;
-//                line = breader.readLine();
-//            }
-//        }
-        var json = Files.readString(Paths.get("contacts.json"));
+        var json = "";
+        try (var reader = new FileReader("contacts.json");
+             var breader = new BufferedReader(reader)
+        ) {
+            var line = breader.readLine();
+            while(line != null) {
+                json = json + line;
+                line = breader.readLine();
+            }
+        }
+       // var json = Files.readString(Paths.get("contacts.json"));
         ObjectMapper mapper = new ObjectMapper();
 
         var value = mapper.readValue(new File("contacts.json"), new TypeReference<List<ContactData>>() {});

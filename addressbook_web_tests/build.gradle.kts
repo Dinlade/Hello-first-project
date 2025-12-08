@@ -9,6 +9,8 @@ repositories {
     mavenCentral()
 }
 
+
+
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -19,6 +21,7 @@ dependencies {
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.1")
     implementation("com.mysql:mysql-connector-j:9.5.0")
+    implementation("org.hibernate.orm:hibernate-core:6.3.0.CR1")
 }
 
 tasks.test {
@@ -28,6 +31,7 @@ tasks.test {
     }
 if (project.hasProperty("target")) {
     systemProperty("target", project.property("target")!!)
+
 }
 }
 

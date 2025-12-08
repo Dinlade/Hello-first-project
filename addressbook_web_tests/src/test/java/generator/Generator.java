@@ -45,36 +45,6 @@ public class Generator {
         save(data);
     }
 
-    private void save(Object data) throws IOException {
-        if ("json".equals(format)) {
-            ObjectMapper mapper = JsonMapper.builder()
-                    .enable(SerializationFeature.INDENT_OUTPUT)
-                    .build();
-            var json = mapper.writeValueAsString(data);
-
-            try (var writer = new FileWriter(output)) {
-                writer.write(json);
-            }
-        } if("yaml".equals(format)){
-            var mapper = new YAMLMapper();
-            mapper.writeValue(new File(output), data);
-        } else if("xml".equals(format)){
-            var mapper = new XmlMapper();
-            mapper.writeValue(new File(output), data);
-        } else {
-            throw new IllegalArgumentException("Неизвестный формат" + format);
-        }
-    }
-
-    private Object generate() {
-        if ("groups".equals(type)) {
-            return generateGroups();
-        } else if("contacts".equals(type)) {
-            return generateContact();
-        } else {
-            throw new IllegalArgumentException("Неизвестный тип данных" + type);
-        }
-    }
 
     private Object generateContact() {
         var result = new ArrayList<ContactData>();
@@ -96,6 +66,36 @@ public class Generator {
                     .withFooter(Common.randomString(i * 10)));
         }
         return result;
+    }
+    private void save(Object data) throws IOException {
+        if ("json".equals(format)) {
+            ObjectMapper mapper = JsonMapper.builder()
+                    .enable(SerializationFeature.INDENT_OUTPUT)
+                    .build();
+            var json = mapper.writeValueAsString(data);
+
+            try (var writer = new FileWriter(output)) {
+                writer.write(json);
+            }
+        }  if ("yaml".equals(format)) {
+            var mapper = new YAMLMapper();
+            mapper.writeValue(new File(output), data);
+        }  if ("xml".equals(format)) {
+            var mapper = new XmlMapper();
+            mapper.writeValue(new File(output), data);
+        } else {
+            throw new IllegalArgumentException("Неизвестный формат" + format);
+        }
+    }
+
+    private Object generate() {
+        if ("groups".equals(type)) {
+            return generateGroups();
+        } else if("contacts".equals(type)) {
+            return generateContact();
+        } else {
+            throw new IllegalArgumentException("Неизвестный тип данных" + type);
+        }
     }
 }
 
