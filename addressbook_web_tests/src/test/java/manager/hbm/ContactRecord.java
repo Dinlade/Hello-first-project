@@ -11,16 +11,18 @@ import model.ContactData;
 public class ContactRecord {
     @Id
     public int id;
-    public String first_name ;
-    public String last_name;
+    public String firstname ;
+    public String lastname;
+    public  String address;
 
     @Column(name = "mobile")
     public String phone;
 
-    public ContactRecord(int id, String first_name, String last_name, String phone) {
+    public ContactRecord(int id, String firstname, String lastname, String phone, String address) {
         this.id = id;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.phone = phone;
+        this.address = address;
     }
 }

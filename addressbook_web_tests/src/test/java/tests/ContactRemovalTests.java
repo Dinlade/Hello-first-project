@@ -13,7 +13,7 @@ public class ContactRemovalTests extends TestBase {
     @Test
     void removeContact() {
         if (!app.contact().isContactPresent()) {
-            app.contact().createContact(new ContactData("", "Dinar","Charles","89172351266", ""));
+            app.contact().createContact(new ContactData("", "Dinar","Charles","89172351266", "", ""));
         }
         var oldContacts = app.contact().getList();
         var rnd = new Random();
