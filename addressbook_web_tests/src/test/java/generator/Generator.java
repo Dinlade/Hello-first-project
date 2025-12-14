@@ -67,6 +67,16 @@ public class Generator {
         }
         return result;
     }
+    private Object generate() {
+        if ("groups".equals(type)) {
+            return generateGroups();
+        } else if("contacts".equals(type)) {
+            return generateContact();
+        } else {
+            throw new IllegalArgumentException("Неизвестный тип данных" + type);
+        }
+    }
+
     private void save(Object data) throws IOException {
         if ("json".equals(format)) {
             ObjectMapper mapper = JsonMapper.builder()
@@ -77,25 +87,16 @@ public class Generator {
             try (var writer = new FileWriter(output)) {
                 writer.write(json);
             }
-        }  if ("yaml".equals(format)) {
-            var mapper = new YAMLMapper();
-            mapper.writeValue(new File(output), data);
-        }  if ("xml".equals(format)) {
-            var mapper = new XmlMapper();
-            mapper.writeValue(new File(output), data);
+        } else if ("yaml".equals(format)) {
+            var mapper=new YAMLMapper();
+            mapper.writeValue(new File(output),data);
+        } else if ("xml".equals(format)) {
+            var mapper=new XmlMapper();
+            mapper.writeValue(new File(output),data);
         } else {
-            throw new IllegalArgumentException("Неизвестный формат" + format);
+            throw new IllegalArgumentException("Неизвестный формат данных" + format);
+        }
         }
     }
 
-    private Object generate() {
-        if ("groups".equals(type)) {
-            return generateGroups();
-        } else if("contacts".equals(type)) {
-            return generateContact();
-        } else {
-            throw new IllegalArgumentException("Неизвестный тип данных" + type);
-        }
-    }
-}
 
