@@ -15,6 +15,18 @@ public class ContactHelper extends HelperBase {
         super(manager);
     }
 
+    public void getContactWithAGroup(ContactData contact, GroupData group) {
+        openContactPage();
+        var oldContacts = manager.hbm().getContactList();
+        fillContactForm(contact);
+        submitContactCreation();
+        returnToHomePage();
+        var newContacts = manager.hbm().getContactList();
+        newContacts.removeAll(oldContacts);
+        selectContact(newContacts.get(0));
+        selectGroupAtHomePage(group);
+    }
+
     public void addContactToGroup(ContactData contact, GroupData group) {
         openHomePage();
         selectContact(contact);
@@ -118,9 +130,7 @@ public class ContactHelper extends HelperBase {
     }
 
     private void selectContact(ContactData contact) {
-        click(By.cssSelector(
-                String.format("input[name='selected[]'][value='%s']", contact.id())
-        ));
+        click(By.cssSelector(String.format("input[value='%s']", contact.id())));
     }
 
     private void removeSelectedContact() {
