@@ -164,19 +164,52 @@ public class ContactCreationTests extends TestBase{
         Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
     }
 
+//    @Test
+//    void canCreateContactAndAddToAGroup() {
+//        var contact = new ContactData()
+//                .withFirstName(randomString(10))
+//                .withLastName(Common.randomString(10))
+//                .withPhoto(randomFile("src/test/resources/images"));
+//        if (app.hbm().getGroupCount() == 0) {
+//            app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
+//        }
+//        var group = app.hbm().getGroupList().get(0);
+//
+//        var oldRelated = app.hbm().getContactsInGroup(group);
+//        app.contact().getContactWithAGroup(contact, group);
+//        var newRelated = app.hbm().getContactsInGroup(group);
+//        Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
+//    }
+//    @Test
+//    void canCreateContactAndAddToGroup() {
+//        if (app.hbm().getGroupCount() == 0) {
+//            app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
+//        }
+//        var group = app.hbm().getGroupList().get(0);
+//
+//        var oldRelated = app.hbm().getContactsInGroup(group);
+//
+//        var contact = new ContactData()
+//                .withFirstName(randomString(10))
+//                .withLastName(randomString(10))
+//                .withPhoto(randomFile("src/test/resources/images"));
+//
+//        app.contact().create(contact);
+//        app.contact().addContactToGroup(contact, group);
+//
+//        var newRelated = app.hbm().getContactsInGroup(group);
+//        Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
+//    }
+
     @Test
-    void canCreateContactAndAddToAGroup() {
-        var contact = new ContactData()
-                .withFirstName(randomString(10))
-                .withLastName(Common.randomString(10))
-                .withPhoto(randomFile("src/test/resources/images"));
+    void canCreateContactAndAddToGroup() {
         if (app.hbm().getGroupCount() == 0) {
             app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
         }
         var group = app.hbm().getGroupList().get(0);
-
         var oldRelated = app.hbm().getContactsInGroup(group);
-        app.contact().getContactWithAGroup(contact, group);
+        var contact = app.hbm().ensureContactNotInGroup(group);
+        app.contact().addContactToGroup(contact, group);
         var newRelated = app.hbm().getContactsInGroup(group);
         Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
     }
