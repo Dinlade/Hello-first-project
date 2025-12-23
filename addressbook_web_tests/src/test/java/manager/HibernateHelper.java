@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HibernateHelper extends HelperBase {
 
@@ -29,37 +30,28 @@ public class HibernateHelper extends HelperBase {
 
 
     static List<ContactData> convertContactList(List<ContactRecord> records) {
-        List<ContactData> result = new ArrayList<>();
-        for (var record : records) {
-            result.add(convert(record));
-        }
-        return result;
+        return records.stream().map(HibernateHelper::convert).collect(Collectors.toList());
     }
 
     private static ContactData convert(ContactRecord record) {
         return new ContactData().withContactId("" + record.id)
                 .withFirstName(record.firstname)
                 .withLastName(record.lastname)
-                .withPhone(record.mobile)
-                .withAddress(record.address);
+                .withAddress(record.address)
+                .withHome(record.home)
+                .withMobile(record.mobile)
+                .withWork(record.work)
+                .withEmail(record.email)
+                .withEmail2(record.email2)
+                .withEmail3(record.email3);
+
     }
 
 
-    private static ContactRecord convert (ContactData data) {
-        var id = data.id();
-        if ("".equals(id)) {
-            id = "0";
-        }
-        return new ContactRecord(Integer.parseInt(id), data.firstname(), data.lastname(), data.phone());
-    }
 
 
     static List<GroupData> convertGroupList(List<GroupRecord> records) {
-        List<GroupData> result = new ArrayList<>();
-        for (var record : records) {
-            result.add(convert(record));
-        }
-        return result;
+        return records.stream().map(HibernateHelper::convert).collect(Collectors.toList());
     }
 
     private static GroupData convert(GroupRecord record) {
@@ -103,8 +95,7 @@ public class HibernateHelper extends HelperBase {
 
     public List<ContactData> getContactsInGroup(GroupData group) {
         return sessionFactory.fromSession(session -> {
-            var groupId = Integer.parseInt(group.id());
-            return convertContactList(session.get(GroupRecord.class, groupId).contacts);
+            return convertContactList(session.get(GroupRecord.class, group.id()).contacts);
         });
     }
     public List<ContactData> getContactList() {

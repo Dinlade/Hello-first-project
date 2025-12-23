@@ -72,6 +72,12 @@ public class ContactCreationTests extends TestBase{
         var contact = new ContactData()
                 .withFirstName(randomString(10))
                 .withLastName(randomString(10))
+                .withHome(randomString(10))
+                .withWork(randomString(10))
+                .withAddress(randomString(10))
+                .withEmail(randomString(10))
+                .withEmail2(randomString(10))
+                .withEmail3(randomString(10))
                 .withPhoto(randomFile("src/test/resources/images"));
         app.contact().createContact(contact);
     }
@@ -201,14 +207,39 @@ public class ContactCreationTests extends TestBase{
 //        Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
 //    }
 
+
+
+//    @Test
+//    void canCreateContactAndAddToGroup() {
+//        if (app.hbm().getGroupCount() == 0) {
+//            app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
+//        }
+//        var group = app.hbm().getGroupList().get(0);
+//        var oldRelated = app.hbm().getContactsInGroup(group);
+//        var contact = app.hbm().ensureContactNotInGroup(group);
+//        app.contact().addContactToGroup(contact, group);
+//        var newRelated = app.hbm().getContactsInGroup(group);
+//        Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());
+//    }
+
+
     @Test
-    void canCreateContactAndAddToGroup() {
+    public void canAddContactToGroup() {
+        if (!app.hbm().getContactList().isEmpty()) {
+            app.contact().removeAllContacts();
+        }
+        app.contact().createContact(new ContactData()
+                .withFirstName(Common.randomString(10))
+                .withLastName(Common.randomString(10))
+                .withMobile(Common.randomString(10)));
+
         if (app.hbm().getGroupCount() == 0) {
-            app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
+            app.hbm().createGroup(new GroupData("", "name", "header", "footer"));
         }
         var group = app.hbm().getGroupList().get(0);
+        var contacts = app.hbm().getContactList();
         var oldRelated = app.hbm().getContactsInGroup(group);
-        var contact = app.hbm().ensureContactNotInGroup(group);
+        var contact = contacts.get(0);
         app.contact().addContactToGroup(contact, group);
         var newRelated = app.hbm().getContactsInGroup(group);
         Assertions.assertEquals(oldRelated.size() + 1, newRelated.size());

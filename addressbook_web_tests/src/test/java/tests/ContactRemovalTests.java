@@ -11,10 +11,12 @@ import java.util.Random;
 public class ContactRemovalTests extends TestBase {
 
 
+
+
     @Test
     void removeContact() {
         if (!app.contact().isContactPresent()) {
-            app.contact().createContact(new ContactData("", "Dinar", "Charles", "89172351266", "", ""));
+            app.contact().createContact(new ContactData("", "Dinar", "Charles", "", "", "", "", "", "", "", ""));
         }
         var oldContacts = app.hbm().getContactList();
         var rnd = new Random();

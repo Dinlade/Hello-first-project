@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Generator {
 
@@ -45,28 +48,24 @@ public class Generator {
         save(data);
     }
 
+    private Object generateData(Supplier<Object> dataSupplier) {
+       return Stream.generate(dataSupplier).limit(count).collect(Collectors.toList());
+    }
+
 
     private Object generateContact() {
-        var result = new ArrayList<ContactData>();
-        for (int i = 0; i < count; i++) {
-            result.add(new ContactData()
-                    .withFirstName(Common.randomString(i * 10))
-                    .withLastName(Common.randomString(i * 10))
-                    .withPhone(Common.randomString(i * 10)));
-        }
-        return result;
+        return generateData(() -> new ContactData()
+                .withFirstName(Common.randomString(10))
+                .withLastName(Common.randomString(10)));
     }
 
     private Object generateGroups() {
-        var result = new ArrayList<GroupData>();
-        for (int i = 0; i < count; i++) {
-            result.add(new GroupData()
-                    .withName(Common.randomString(i * 10))
-                    .withHeader(Common.randomString(i * 10))
-                    .withFooter(Common.randomString(i * 10)));
-        }
-        return result;
+        return generateData(() -> new GroupData()
+                .withName(Common.randomString(10))
+                .withHeader(Common.randomString(10))
+                .withFooter(Common.randomString(10)));
     }
+
     private Object generate() {
         if ("groups".equals(type)) {
             return generateGroups();

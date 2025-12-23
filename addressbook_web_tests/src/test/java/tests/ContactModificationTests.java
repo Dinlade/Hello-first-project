@@ -1,7 +1,6 @@
 package tests;
 
 import model.ContactData;
-import model.GroupData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +13,7 @@ public class ContactModificationTests extends TestBase{
     @Test
     void canModifyContact() {
         if (app.contact().getCountContact() == 0) {
-            app.contact().createContact(new ContactData("id","first name", "last name", "phone", "",""));
+            app.contact().createContact(new ContactData("id","first name", "last name", "","", "", "", "", "","" ,"" ));
         }
         var oldContacts = app.hbm().getContactList();
         var rnd = new Random();

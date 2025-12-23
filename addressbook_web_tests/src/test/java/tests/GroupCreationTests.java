@@ -19,6 +19,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class GroupCreationTests extends TestBase {
 
@@ -49,32 +52,28 @@ public class GroupCreationTests extends TestBase {
         return result;
     }
 
-    public static List<GroupData> singleRandomGroup() {
-       return List.of(new GroupData()
+    public static Stream<GroupData> randomGroup() {
+        Supplier<GroupData> randomGroup = () -> new GroupData()
                 .withName(Common.randomString(10))
                 .withHeader(Common.randomString(20))
-                .withFooter(Common.randomString(30)));
+                .withFooter(Common.randomString(30));
+       return Stream.generate(randomGroup).limit(1);
     }
 
     @ParameterizedTest
-    @MethodSource("singleRandomGroup")
+    @MethodSource("randomGroup")
     public void canCreateGroups(GroupData group) {
         var oldGroups = app.jdbc().getGroupList();
         app.groups().createGroup(group);
         var newGroups = app.jdbc().getGroupList();
-        Comparator<GroupData> compareById = (o1, o2) -> {
-            return Integer.compare(Integer.parseInt(o1.id()), Integer.parseInt(o2.id()));
-        };
-        newGroups.sort(compareById);
         var maxId = newGroups.get(newGroups.size() - 1).id();
 
+        var extraGroups = newGroups.stream().filter(oldGroups::contains).toList();
+        var newId = extraGroups.get(0).id();
 
         var expectedList = new ArrayList<>(oldGroups);
         expectedList.add(group.withId(maxId));
-        expectedList.sort(compareById);
-        Assertions.assertEquals(newGroups,expectedList);
-
-        var newUiGroups = app.groups().getList();
+        Assertions.assertEquals(Set.copyOf(newGroups),Set.copyOf(expectedList));
     }
 
     public static List<GroupData> negativeGroupProvider() {

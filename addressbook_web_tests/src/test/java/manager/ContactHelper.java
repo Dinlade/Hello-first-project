@@ -3,12 +3,15 @@ package manager;
 import model.ContactData;
 import model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ContactHelper extends HelperBase {
     public ContactHelper(ApplicationManager manager) {
@@ -33,6 +36,7 @@ public class ContactHelper extends HelperBase {
         selectGroupForContact(group);
         addToGroup();
     }
+
     private void selectGroupAtHomePage(GroupData group) {
         new Select(manager.driver.findElement(By.name("to_group"))).selectByValue(group.id());
         click(By.name("add"));
@@ -79,7 +83,7 @@ public class ContactHelper extends HelperBase {
     }
 
     private void selectGroup(GroupData group) {
-      new Select(manager.driver.findElement(By.name("new_group"))).selectByValue(group.id());
+        new Select(manager.driver.findElement(By.name("new_group"))).selectByValue(group.id());
     }
 
 
@@ -109,8 +113,12 @@ public class ContactHelper extends HelperBase {
     private void fillContactForm(ContactData contact) {
         type(By.name("firstname"), contact.firstname());
         type(By.name("lastname"), contact.lastname());
-        type(By.name("mobile"), contact.phone());
         type(By.name("address"), contact.address());
+        type(By.name("email"), contact.email());
+        type(By.name("email2"), contact.email2());
+        type(By.name("email3"), contact.email3());
+        type(By.name("home"), contact.home());
+        type(By.name("work"), contact.work());
     }
 
     private void openHomePage() {
@@ -158,10 +166,9 @@ public class ContactHelper extends HelperBase {
         for (var td : tds) {
             var tdFirstName = td.findElement(By.cssSelector("td:nth-child(3)")).getText();
             var tdLastName = td.findElement(By.cssSelector("td:nth-child(2)")).getText();
-            var tdPhone = td.findElement(By.cssSelector("td:nth-child(6)")).getText();
             var checkbox = td.findElement(By.name("selected[]"));
             var id = checkbox.getAttribute("value");
-            contacts.add(new ContactData().withContactId(id).withFirstName(tdFirstName).withLastName(tdLastName).withPhone(tdPhone));
+            contacts.add(new ContactData().withContactId(id).withFirstName(tdFirstName).withLastName(tdLastName));
         }
         return contacts;
     }
@@ -192,4 +199,36 @@ public class ContactHelper extends HelperBase {
         removeSelectedContactFromGroup();
         returnToHomePage();
     }
+
+    public String getPhones(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[6]", contact.id()))).getText();
+    }
+
+    public Map<String, String> getPhones() {
+        var result = new HashMap<String, String>();
+        List<WebElement> rows = manager.driver.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            var id = row.findElement(By.tagName("input")).getAttribute("id");
+            var phones = row.findElements(By.tagName("td")).get(5).getText();
+            result.put(id, phones);
+        }
+        return result;
+    }
+
+    public Map<String, String> getEmails() {
+        var result = new HashMap<String, String>();
+        List<WebElement> rows = manager.driver.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            var id = row.findElement(By.tagName("input")).getAttribute("id");
+            var phones = row.findElements(By.tagName("td")).get(4).getText();
+            result.put(id, phones);
+        }
+        return result;
+    }
+
+    public String getAddress(ContactData contact) {
+        return manager.driver.findElement(By.xpath(String.format("//input[@id='%s']/../../td[4]", contact.id()))).getText();
+    }
 }
+
