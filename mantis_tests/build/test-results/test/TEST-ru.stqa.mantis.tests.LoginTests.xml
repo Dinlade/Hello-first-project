@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.mantis.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-24T19:47:28.656Z" hostname="DESKTOP-F8C0EVU" time="3.937">
-  <properties/>
-  <testcase name="canLogin()" classname="ru.stqa.mantis.tests.LoginTests" time="3.937"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

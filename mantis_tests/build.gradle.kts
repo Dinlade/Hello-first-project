@@ -14,6 +14,10 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.seleniumhq.selenium:selenium-java:4.38.0")
+    testImplementation("com.squareup.okhttp3:okhttp:5.3.0")
+    testImplementation("com.squareup.okhttp3:okhttp-urlconnection:5.3.0")
+    testImplementation ("org.eclipse.angus:angus-mail:2.0.4")
+
 }
 
 tasks.test {
