@@ -18,7 +18,7 @@ public class UserRegistrationTests extends TestBase {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        app.session().registration(name, name+"@localhost");
+        app.session().registration(name, name + "@localhost");
         var messages = app.mail().receive(name + "@localhost", "password", Duration.ofSeconds(10));
         var text = messages.get(0).content();
         var pattern = Pattern.compile("http://\\S*");

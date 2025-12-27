@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.mantis.tests.MailTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-12-27T11:42:05.880Z" hostname="DESKTOP-F8C0EVU" time="0.054">
+<testsuite name="ru.stqa.mantis.tests.MailTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-27T18:26:22.804Z" hostname="DESKTOP-F8C0EVU" time="0.191">
   <properties/>
-  <testcase name="canReceiveEmail()" classname="ru.stqa.mantis.tests.MailTests" time="0.054">
-    <failure message="java.lang.RuntimeException: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 110; timeout -1;&#10;  nested exception is:&#10;&#9;java.net.ConnectException: Connection refused: connect" type="java.lang.RuntimeException">java.lang.RuntimeException: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 110; timeout -1;
-  nested exception is:
-	java.net.ConnectException: Connection refused: connect
-	at ru.stqa.mantis.manager.MailHelper.getInbox(MailHelper.java:61)
-	at ru.stqa.mantis.manager.MailHelper.receive(MailHelper.java:21)
-	at ru.stqa.mantis.tests.MailTests.canReceiveEmail(MailTests.java:18)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 110; timeout -1;
-  nested exception is:
-	java.net.ConnectException: Connection refused: connect
-	at app//org.eclipse.angus.mail.pop3.POP3Store.protocolConnect(POP3Store.java:196)
-	at app//jakarta.mail.Service.connect(Service.java:345)
-	at app//jakarta.mail.Service.connect(Service.java:225)
-	at app//ru.stqa.mantis.manager.MailHelper.getInbox(MailHelper.java:57)
-	... 5 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:589)
-	at java.base/sun.nio.ch.Net.connect(Net.java:578)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:752)
-	at java.base/java.net.Socket.connect(Socket.java:687)
-	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368)
-	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243)
-	at org.eclipse.angus.mail.pop3.Protocol.&lt;init&gt;(Protocol.java:121)
-	at org.eclipse.angus.mail.pop3.POP3Store.getPort(POP3Store.java:250)
-	at org.eclipse.angus.mail.pop3.POP3Store.protocolConnect(POP3Store.java:192)
-	... 8 more
-</failure>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="canReceiveEmail()" classname="ru.stqa.mantis.tests.MailTests" time="0.129"/>
+  <testcase name="canExtractUrl()" classname="ru.stqa.mantis.tests.MailTests" time="0.028"/>
+  <testcase name="canDrainInbox()" classname="ru.stqa.mantis.tests.MailTests" time="0.031"/>
+  <system-out><![CDATA[[MailMessage[from=Mantis Bug Tracker <noreply@example.com>, content=Thank you for registering. You have an account with username "pepudgay". In
+order to complete your registration, visit the following URL (make sure it is
+entered as the single line) and set your own access password:
+
+http://localhost/mantisbt-2.26.4/verify.php?id=5&confirm_hash=PlvdwhOMX1_yx1ToBM6h2CxXIeb63C0PBj_7m7Zb5C8t_t7LvGXdqI9ewXt1ECKwMz_GBrC9JxkUegImI8xR
+
+If you did not request any registration, ignore this message and nothing will
+happen.
+
+Do not reply to this message
+
+]]
+http://localhost/mantisbt-2.26.4/verify.php?id=5&confirm_hash=PlvdwhOMX1_yx1ToBM6h2CxXIeb63C0PBj_7m7Zb5C8t_t7LvGXdqI9ewXt1ECKwMz_GBrC9JxkUegImI8xR
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
