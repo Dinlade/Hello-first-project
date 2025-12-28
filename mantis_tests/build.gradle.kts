@@ -1,6 +1,8 @@
 plugins {
     id("java")
-    id 'org.hidetake.swagger.generator' version '2.19.2'
+    id("org.hidetake.swagger.generator") version "2.19.2"
+
+
 }
 
 group = "org.example"
@@ -18,7 +20,17 @@ dependencies {
     testImplementation("com.squareup.okhttp3:okhttp:5.3.0")
     testImplementation("com.squareup.okhttp3:okhttp-urlconnection:5.3.0")
     testImplementation ("org.eclipse.angus:angus-mail:2.0.4")
-    swaggerCodegen 'io.swagger:swagger-codegen-cli:2.4.34'
+    swaggerCodegen("io.swagger:swagger-codegen-cli:2.4.34")
+
+    testImplementation("javax.annotation:javax.annotation-api:1.3.2")
+    testImplementation ("io.swagger:swagger-annotations:1.5.17")
+    testImplementation ("com.squareup.okhttp:okhttp:2.7.5")
+    testImplementation ("com.squareup.okhttp:logging-interceptor:2.7.5")
+    testImplementation ("com.google.code.gson:gson:2.8.1")
+    testImplementation ("io.gsonfire:gson-fire:1.8.0")
+    testImplementation ("org.threeten:threetenbp:1.3.5")
+
+
 
 }
 
@@ -28,10 +40,8 @@ tasks.test {
 }
 
 swaggerSources {
-    mantis {
-        inputFile = file('swagger.json')
-        code {
-            language = 'java'
-        }
+    create("mantiss") {
+        setInputFile(file("$projectDir/swagger.json"))
+        code.language = "java"
     }
 }
