@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.collections.CollectionTests" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-12-30T20:43:04.491Z" hostname="DESKTOP-F8C0EVU" time="0.008">
+  <properties/>
+  <testcase name="listTests()" classname="tests.collections.CollectionTests" time="0.001"/>
+  <testcase name="arrayTests()" classname="tests.collections.CollectionTests" time="0.003">
+    <failure message="org.opentest4j.AssertionFailedError: expected: java.lang.String@780b26f0&lt;3&gt; but was: java.lang.Integer@35ef76a8&lt;3&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: java.lang.String@780b26f0&lt;3&gt; but was: java.lang.Integer@35ef76a8&lt;3&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at app//tests.collections.CollectionTests.arrayTests(CollectionTests.java:16)
+	at java.base@21.0.8/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="setTest()" classname="tests.collections.CollectionTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

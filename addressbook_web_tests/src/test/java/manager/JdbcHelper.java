@@ -1,5 +1,6 @@
 package manager;
 
+import io.qameta.allure.Step;
 import model.GroupData;
 
 import java.sql.DriverManager;
@@ -12,6 +13,7 @@ public class JdbcHelper extends HelperBase {
         super(manager);
     }
 
+    @Step
     public List<GroupData> getGroupList() {
         var groups = new ArrayList<GroupData>();
         try (var conn = DriverManager.getConnection("jdbc:mysql://localhost/addressbook", "root", "")) {
