@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.mantis.tests.IssueCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-28T21:37:19.480Z" hostname="DESKTOP-F8C0EVU" time="1.606">
-  <properties/>
-  <testcase name="canCreateIssue()" classname="ru.stqa.mantis.tests.IssueCreationTests" time="1.606"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
