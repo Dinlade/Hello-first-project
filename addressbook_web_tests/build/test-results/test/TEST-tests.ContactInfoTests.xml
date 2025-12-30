@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ContactInfoTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-30T20:49:45.088Z" hostname="DESKTOP-F8C0EVU" time="0.258">
-  <properties/>
-  <testcase name="testAddress()" classname="tests.ContactInfoTests" time="0.05"/>
-  <testcase name="testEmail()" classname="tests.ContactInfoTests" time="0.112"/>
-  <testcase name="testPhones()" classname="tests.ContactInfoTests" time="0.092"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

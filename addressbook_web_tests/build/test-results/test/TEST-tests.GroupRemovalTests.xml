@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.GroupRemovalTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-30T20:50:05.894Z" hostname="DESKTOP-F8C0EVU" time="2.798">
+<testsuite name="tests.GroupRemovalTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-30T21:24:06.543Z" hostname="DESKTOP-F8C0EVU" time="28.067">
   <properties/>
-  <testcase name="canRemoveAllGroupsAtOnce()" classname="tests.GroupRemovalTests" time="0.339"/>
-  <testcase name="canRemoveGroup()" classname="tests.GroupRemovalTests" time="2.457"/>
+  <testcase name="canRemoveGroup()" classname="tests.GroupRemovalTests" time="28.067"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[дек. 31, 2025 12:24:06 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+дек. 31, 2025 12:24:30 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.3.0.CR1
+дек. 31, 2025 12:24:30 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000406: Using bytecode reflection optimizer
+дек. 31, 2025 12:24:30 AM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+INFO: HHH000026: Second-level cache disabled
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost/addressbook?zeroDateTimeBehavior=convertToNull]
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=root}
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+дек. 31, 2025 12:24:30 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 20 (min=1)
+дек. 31, 2025 12:24:30 AM io.opentelemetry.api.GlobalOpenTelemetry maybeAutoConfigureAndSetGlobal
+INFO: AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
+дек. 31, 2025 12:24:30 AM org.hibernate.dialect.Dialect checkVersion
+WARN: HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+дек. 31, 2025 12:24:33 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+]]></system-err>
 </testsuite>
