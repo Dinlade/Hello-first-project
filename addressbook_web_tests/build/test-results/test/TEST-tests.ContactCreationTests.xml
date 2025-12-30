@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ContactCreationTests" tests="6" skipped="0" failures="5" errors="0" timestamp="2025-12-30T20:42:24.909Z" hostname="DESKTOP-F8C0EVU" time="16.268">
+<testsuite name="tests.ContactCreationTests" tests="6" skipped="0" failures="5" errors="0" timestamp="2025-12-30T20:49:26.823Z" hostname="DESKTOP-F8C0EVU" time="18.252">
   <properties/>
-  <testcase name="[1] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="8.037">
+  <testcase name="[1] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="9.741">
     <failure message="java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
 	at manager.HelperBase.type(HelperBase.java:21)
@@ -55,7 +55,7 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 </failure>
   </testcase>
-  <testcase name="[2] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="0.094">
+  <testcase name="[2] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="0.107">
     <failure message="java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
 	at manager.HelperBase.type(HelperBase.java:21)
@@ -109,7 +109,7 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 </failure>
   </testcase>
-  <testcase name="[3] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="0.087">
+  <testcase name="[3] ContactData[id=, firstname=null, lastname=null, photo=, address=null, home=null, mobile=null, work=null, email=null, email2=null, email3=null]" classname="tests.ContactCreationTests" time="0.107">
     <failure message="java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
 	at manager.HelperBase.type(HelperBase.java:21)
@@ -163,15 +163,15 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 </failure>
   </testcase>
-  <testcase name="canAddContactToGroup()" classname="tests.ContactCreationTests" time="4.034">
-    <failure message="org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='delete']&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Build info: version: '4.38.0', revision: '6b412e825c*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [4c89d91f-c1c2-43be-ab95-16b5f5f7cfb6, findElement {using=name, value=delete}]&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16724, moz:profile: C:\Users\sdmkz\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}&#10;Session ID: 4c89d91f-c1c2-43be-ab95-16b5f5f7cfb6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='delete']
+  <testcase name="canAddContactToGroup()" classname="tests.ContactCreationTests" time="4.039">
+    <failure message="org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='delete']&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Build info: version: '4.38.0', revision: '6b412e825c*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [03e18be1-149d-4e40-abbb-72cdca093570, findElement {using=name, value=delete}]&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 40828, moz:profile: C:\Users\sdmkz\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}&#10;Session ID: 03e18be1-149d-4e40-abbb-72cdca093570" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='delete']
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [4c89d91f-c1c2-43be-ab95-16b5f5f7cfb6, findElement {using=name, value=delete}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16724, moz:profile: C:\Users\sdmkz\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 4c89d91f-c1c2-43be-ab95-16b5f5f7cfb6
+Command: [03e18be1-149d-4e40-abbb-72cdca093570, findElement {using=name, value=delete}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 40828, moz:profile: C:\Users\sdmkz\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 03e18be1-149d-4e40-abbb-72cdca093570
 	at java.base@21.0.8/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base@21.0.8/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base@21.0.8/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -195,8 +195,8 @@ Session ID: 4c89d91f-c1c2-43be-ab95-16b5f5f7cfb6
 	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
 </failure>
   </testcase>
-  <testcase name="canCreateContactInGroup()" classname="tests.ContactCreationTests" time="2.962">
-    <failure message="org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 38&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Build info: version: '4.38.0', revision: '6b412e825c*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 38
+  <testcase name="canCreateContactInGroup()" classname="tests.ContactCreationTests" time="2.901">
+    <failure message="org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 41&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Build info: version: '4.38.0', revision: '6b412e825c*'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 41
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
@@ -211,31 +211,31 @@ Driver info: driver.version: unknown
 	at java.base@21.0.8/java.util.ArrayList.forEach(ArrayList.java:1596)
 </failure>
   </testcase>
-  <testcase name="canCreateContact()" classname="tests.ContactCreationTests" time="0.919"/>
+  <testcase name="canCreateContact()" classname="tests.ContactCreationTests" time="1.216"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[дек. 30, 2025 11:42:28 PM org.hibernate.Version logVersion
+  <system-err><![CDATA[дек. 30, 2025 11:49:30 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate ORM core version 6.3.0.CR1
-дек. 30, 2025 11:42:28 PM org.hibernate.cfg.Environment <clinit>
+дек. 30, 2025 11:49:30 PM org.hibernate.cfg.Environment <clinit>
 INFO: HHH000406: Using bytecode reflection optimizer
-дек. 30, 2025 11:42:28 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+дек. 30, 2025 11:49:31 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
 INFO: HHH000026: Second-level cache disabled
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using built-in connection pool (not intended for production use)
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001005: Loaded JDBC driver class: com.mysql.cj.jdbc.Driver
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost/addressbook?zeroDateTimeBehavior=convertToNull]
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {password=****, user=root}
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-дек. 30, 2025 11:42:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+дек. 30, 2025 11:49:31 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH10001115: Connection pool size: 20 (min=1)
-дек. 30, 2025 11:42:28 PM io.opentelemetry.api.GlobalOpenTelemetry maybeAutoConfigureAndSetGlobal
+дек. 30, 2025 11:49:31 PM io.opentelemetry.api.GlobalOpenTelemetry maybeAutoConfigureAndSetGlobal
 INFO: AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true
-дек. 30, 2025 11:42:29 PM org.hibernate.dialect.Dialect checkVersion
+дек. 30, 2025 11:49:32 PM org.hibernate.dialect.Dialect checkVersion
 WARN: HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
-дек. 30, 2025 11:42:31 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+дек. 30, 2025 11:49:34 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
 INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 ]]></system-err>
 </testsuite>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-30T20:43:00.772Z" hostname="DESKTOP-F8C0EVU" time="0.754">
+<testsuite name="tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-30T20:50:05.272Z" hostname="DESKTOP-F8C0EVU" time="0.618">
   <properties/>
-  <testcase name="canModifyGroup()" classname="tests.GroupModificationTests" time="0.754"/>
+  <testcase name="canModifyGroup()" classname="tests.GroupModificationTests" time="0.618"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

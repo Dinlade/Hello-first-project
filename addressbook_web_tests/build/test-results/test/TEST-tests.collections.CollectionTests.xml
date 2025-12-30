@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.collections.CollectionTests" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-12-30T20:43:04.491Z" hostname="DESKTOP-F8C0EVU" time="0.008">
+<testsuite name="tests.collections.CollectionTests" tests="3" skipped="0" failures="1" errors="0" timestamp="2025-12-30T20:50:08.695Z" hostname="DESKTOP-F8C0EVU" time="0.007">
   <properties/>
-  <testcase name="listTests()" classname="tests.collections.CollectionTests" time="0.001"/>
+  <testcase name="listTests()" classname="tests.collections.CollectionTests" time="0.0"/>
   <testcase name="arrayTests()" classname="tests.collections.CollectionTests" time="0.003">
-    <failure message="org.opentest4j.AssertionFailedError: expected: java.lang.String@780b26f0&lt;3&gt; but was: java.lang.Integer@35ef76a8&lt;3&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: java.lang.String@780b26f0&lt;3&gt; but was: java.lang.Integer@35ef76a8&lt;3&gt;
+    <failure message="org.opentest4j.AssertionFailedError: expected: java.lang.String@5ff37957&lt;3&gt; but was: java.lang.Integer@5607f2fc&lt;3&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: java.lang.String@5ff37957&lt;3&gt; but was: java.lang.Integer@5607f2fc&lt;3&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
